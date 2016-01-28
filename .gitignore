@@ -1,0 +1,22 @@
+#xcode Noise
+build/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.xcworkspace
+xcuserdata
+*.moved-aside
+DerivedData
+.idea/
+
+# OSX Noise
+.DS_Store
+profile
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+# Don't ignore Gemfile.lock
+!Gemfile.lock
