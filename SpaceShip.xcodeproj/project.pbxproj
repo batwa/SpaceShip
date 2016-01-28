@@ -16,6 +16,7 @@
 		D87A74E21C5A8988008ED5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87A74E01C5A8988008ED5E2 /* LaunchScreen.storyboard */; };
 		D87A74ED1C5A8988008ED5E2 /* SpaceShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A74EC1C5A8988008ED5E2 /* SpaceShipTests.swift */; };
 		D87A74F81C5A8988008ED5E2 /* SpaceShipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A74F71C5A8988008ED5E2 /* SpaceShipUITests.swift */; };
+		D87A75061C5AA534008ED5E2 /* PlayerShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A75051C5AA534008ED5E2 /* PlayerShip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D87A74F31C5A8988008ED5E2 /* SpaceShipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceShipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87A74F71C5A8988008ED5E2 /* SpaceShipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShipUITests.swift; sourceTree = "<group>"; };
 		D87A74F91C5A8988008ED5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87A75051C5AA534008ED5E2 /* PlayerShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerShip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D87A74DE1C5A8988008ED5E2 /* Assets.xcassets */,
 				D87A74E01C5A8988008ED5E2 /* LaunchScreen.storyboard */,
 				D87A74E31C5A8988008ED5E2 /* Info.plist */,
+				D87A75051C5AA534008ED5E2 /* PlayerShip.swift */,
 			);
 			path = SpaceShip;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87A75061C5AA534008ED5E2 /* PlayerShip.swift in Sources */,
 				D87A74D81C5A8988008ED5E2 /* GameScene.swift in Sources */,
 				D87A74DA1C5A8988008ED5E2 /* GameViewController.swift in Sources */,
 				D87A74D41C5A8988008ED5E2 /* AppDelegate.swift in Sources */,
