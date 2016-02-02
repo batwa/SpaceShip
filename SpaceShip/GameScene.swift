@@ -9,8 +9,9 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    let playerShip:PlayerShip = PlayerShip();
+    
     override func didMoveToView(view: SKView) {
-        let playerShip:PlayerShip = PlayerShip();
         playerShip.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         playerShip.setScale(0.5)
         
@@ -18,16 +19,22 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
+        let touch = touches.first
+        let touchLocation = touch!.locationInNode(self)
+        
+        rotateNode(playerShip, pointToFace: touchLocation)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first
+        let touchLocation = touch!.locationInNode(self)
         
+        rotateNode(playerShip, pointToFace: touchLocation)
     }
    
     func rotateNode(node: SKNode, pointToFace: CGPoint){
         
-        let angle:CGFloat = atan2(pointToFace.y - node.position.y, pointToFace.x - node.position.x)
+        let angle:CGFloat = atan2(pointToFace.y - node.position.y, pointToFace.x - node.position.x) - CGFloat(M_PI_2)
         
         if(node.zRotation < 0){
             node.zRotation = node.zRotation + CGFloat(M_PI * 2);
