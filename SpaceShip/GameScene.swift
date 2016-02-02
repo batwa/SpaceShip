@@ -10,12 +10,17 @@ import SpriteKit
 
 class GameScene: SKScene {
     let playerShip:PlayerShip = PlayerShip();
+    let bigAsteroid:BigAsteroid = BigAsteroid()
     
     override func didMoveToView(view: SKView) {
         playerShip.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         playerShip.setScale(0.5)
         
+        bigAsteroid.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+        bigAsteroid.setScale(0.1)
+        
         self.addChild(playerShip)
+        self.addChild(bigAsteroid)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -45,5 +50,6 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        
     }
 }
