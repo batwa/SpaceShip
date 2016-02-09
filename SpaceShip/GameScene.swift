@@ -11,14 +11,19 @@ import SpriteKit
 class GameScene: SKScene {
     let playerShip:PlayerShip = PlayerShip();
     let bigAsteroid:BigAsteroid = BigAsteroid()
+    let background = SKSpriteNode(imageNamed: "spacebackground")
+    
     
     override func didMoveToView(view: SKView) {
+        background.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidX(self.frame))
+        
         playerShip.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         playerShip.setScale(0.5)
         
         bigAsteroid.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         bigAsteroid.setScale(0.1)
         
+        self.addChild(background)
         self.addChild(playerShip)
         self.addChild(bigAsteroid)
         
