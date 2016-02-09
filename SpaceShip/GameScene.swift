@@ -21,7 +21,20 @@ class GameScene: SKScene {
         
         self.addChild(playerShip)
         self.addChild(bigAsteroid)
+        
+        bigAsteroid.physicsBody = SKPhysicsBody(circleOfRadius: bigAsteroid.size.height / 2)
+        bigAsteroid.physicsBody?.dynamic = true
+        bigAsteroid.physicsBody?.allowsRotation = true
+        
+        let ground = SKNode()
+        ground.position = CGPointMake(0, 0)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1))
+        ground.physicsBody?.dynamic = false
+        
+        self.addChild(ground)
     }
+    
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first

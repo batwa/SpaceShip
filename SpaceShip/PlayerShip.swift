@@ -10,6 +10,7 @@ import SpriteKit
 
 class PlayerShip: SKSpriteNode {
     
+    
     init(){
         let texture = SKTexture(imageNamed: "Spaceship")
         super.init(texture: texture, color: SKColor.clearColor(), size: texture.size())
